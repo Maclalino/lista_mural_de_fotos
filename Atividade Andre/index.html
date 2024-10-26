@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Clara Marques Lino</title>
+    <style>
+        /* Estilos existentes */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            text-align: justify;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            margin-top: 20px;
+            background-color: #d8d8d8;
+            padding: 10px 0;
+        }
+        footer h2 {
+            font-size: 1.5em;
+            color: #555;
+        }
+        /* Slider */
+        .slider {
+            position: relative;
+            width: 600px;
+            height: 300px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slider li {
+            list-style: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .slider input[type="radio"] {
+            display: none;
+        }
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        #slide1:checked ~ li:nth-child(1),
+        #slide2:checked ~ li:nth-child(2),
+        #slide3:checked ~ li:nth-child(3) {
+            opacity: 1;
+            position: static;
+        }
+        .slider label {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            background-color: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="radio"]:checked + label {
+            background-color: #333;
+        }
+        .dots {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maria Clara Marques Lino</h1>
+    <p>
+        Oi, sou estudante de Ciências da Computação, atualmente estou no quarto período e estou a procura de um estágio na área. Tenho 19 anos
+        e estou muito animada para novas experiências! Gosto de futebol, é meu hobbie favorito.
+    </p>
+    <img src="eu.jpg" alt="Minha foto" />
+
+    <!-- Slider -->
+    <ul class="slider">
+        <li>
+            <input type="radio" id="slide1" name="slide" checked>
+            <label for="slide1"></label>
+            <img src="images/1.jpg" alt="Imagem 1">
+        </li>
+        <li>
+            <input type="radio" id="slide2" name="slide">
+            <label for="slide2"></label>
+            <img src="th.jpg" alt="Imagem 2">
+        </li>
+        <li>
+            <input type="radio" id="slide3" name="slide">
+            <label for="slide3"></label>
+            <img src="th1.jpg" alt="Imagem 3">
+        </li>
+    </ul>
+    
+    <!-- Link para o Mural de Fotos -->
+    <p><a href="mural_de_fotos.html">Ir para o Mural de Fotos</a></p>
+    
+    <footer>
+        <h2>Página da Maria Clara Marques Lino, desenvolvida na aula de 30/09.</h2>
+    </footer>
+</body>
+</html>
